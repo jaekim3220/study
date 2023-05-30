@@ -9,10 +9,11 @@
 
 '''M번 더하기, K번 초과 불가, 배열 크기 N'''
 
-def maxsum(N,M,K, mylist):
-    sorted(mylist, reverse=True) # 내림차순 정렬
-    first_big = mylist[0] #큰 수1
-    second_big = mylist[1] #큰 수2
+def maxsum(N,M,K, myarr):
+    myarr = sorted(myarr, reverse=True) # 내림차순 정렬
+    print(myarr) # 정렬 확인용
+    first_big = myarr[0] #큰 수1
+    second_big = myarr[1] #큰 수2
     
     count = 0 #계산 횟 수 초기 값 = 0
     myresult = 0 #계산 값 저장소 초기 값 = 0
