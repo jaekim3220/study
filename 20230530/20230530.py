@@ -24,5 +24,6 @@ def maxsum(N,M,K, myarr):
         else: #큰 수2 덧셈
             myresult += second_big
             count = 0 #큰 수2 덧셈은 1회만 실행
+    M -= 1 #M에서 1씩 감소 -> while문 종료 조건
     return myresult #결과 값 출력
 print(maxsum(5,8,3, [2, 4, 5, 4, 6]))
