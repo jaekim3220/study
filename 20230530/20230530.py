@@ -20,9 +20,9 @@ def maxsum(N,M,K, myarr):
     while M > 0: #M은 음수 불가
         if count < K : #count=k일 경우 덧셈 중단
             myresult += first_big
-            count += 1 #
+            count += 1 #덧셈한 수 +1
         else: #큰 수2 덧셈
             myresult += second_big
-            count += 1
+            count = 0 #큰 수2 덧셈은 1회만 실행
     return myresult #결과 값 출력
 print(maxsum(5,8,3, [2, 4, 5, 4, 6]))
