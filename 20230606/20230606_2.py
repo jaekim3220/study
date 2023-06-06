@@ -15,7 +15,7 @@ def count_num(N, K):
             N = N / K # N에 새로운 몫을 할당 
         else:
             N -= 1
-        answer += 1
+        answer += 1  # 계산 횟수를 1 증가시킴
     return answer
 print(count_num(17, 4))
 print(count_num(16, 4))
