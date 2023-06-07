@@ -1,0 +1,1 @@
+what_is_commit = 'commit은 본인의 활동, 변경 내용의 한줄 요약입니다.'
