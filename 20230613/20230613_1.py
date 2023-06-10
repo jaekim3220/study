@@ -7,8 +7,9 @@ N=5로 모험가는 5명, 모험가의 공포도는 2,3,1,2,2일 경우
 모든 모험가를 특정한 그룹에 넣을 필요 없음
 '''
 
-group_count = 0 # 그룹의 수
+
 def adventure(N, fear):
+    group_count = 0 # 그룹의 수
     fear.sort() # 공포도를 오름차순 정렬
     group_member = 0
 
@@ -18,7 +19,6 @@ def adventure(N, fear):
         if group_member >= a:
             group_count += 1
     return group_count
-
 N = 5
 fear = [2, 3, 1, 2, 2]
 print(adventure(N, fear))
