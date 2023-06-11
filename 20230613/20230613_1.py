@@ -13,10 +13,10 @@ def adventure(N, fear):
     group_member = 0
 
     for a in fear: # 공포도가 a면 
-        group_member += a # 그룹 인원은 a명
+        group_member += 1 # 그룹 인원이 a명이 될 때까지 그룹 인원 추가
         
-        if group_member >= a:
-            group_count += 1
+        if group_member >= a: # 그룹 인원이 a명 달성 시
+            group_count += 1 # 그룹 수를 갱신
             group_member = 0  # 새로운 그룹 형성을 위해 그룹 인원 초기화
             
     return group_count
