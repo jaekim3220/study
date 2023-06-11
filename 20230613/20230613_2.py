@@ -4,8 +4,8 @@
 '''
 
 def calculate(S):
-    answer = 0
-    for a in range(len(S)):
+    answer = int(S[0]) # 초기값은 입력한 문자열 S의 첫 번째 값
+    for a in range(1, len(S)): # 1~S의 길이만큼 연산을 진행
         if a != 0:
             answer *= a
         else:
