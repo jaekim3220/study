@@ -16,8 +16,8 @@ def adventure(N, fear):
     for a in fear: # 공포도가 a면 
         group_member += a # 그룹 인원은 a명
         
-    if group_member >= a:
-        group_count += 1
+        if group_member >= a:
+            group_count += 1
     return group_count
 N = 5
 fear = [2, 3, 1, 2, 2]
