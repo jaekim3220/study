@@ -10,17 +10,18 @@ def final_position(N, Plan):
     x, y = 1,1
     for a in Plan:
         if a == "L":
-            if x > 1: #공간을 벗어나지 않게 제한
-                x -= 1
-        elif a == 'R':
-            if x < N:
-                x +=1
-        elif a == 'U':
-            if y > 1:
+            if y > 1: #공간을 벗어나지 않게 제한
                 y -= 1
-        else:
+        elif a == 'R':
             if y < N:
                 y += 1
+        elif a == 'U':
+            if x > 1:
+                x -= 1
+        else:
+            if x < N:
+                x +=1
+        # print(x,y)
     return x,y
 
 N = 5
