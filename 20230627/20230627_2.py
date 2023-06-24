@@ -16,5 +16,6 @@ def time_count(N):
             for s in range(60): # 0부터 59까지 초 반복
                 if '3'in str(h)+str(m)+str(s):
                     count+=1
+    return count
 N = 5
 print(time_count(N))
