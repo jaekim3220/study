@@ -7,9 +7,11 @@
 
 def foodFight(food):
     player1 = ''
-    for i in range(1,len(food)):
-        player1 += str(i)*(food[i]//2)
-    result = player1 + '0' + player1[::-1]
+    for i in range(1,len(food)):    #index=1부터 음식으로 인식
+
+        player1 += str(i)*(food[i]//2)  #i번째 칼로리 음식을 몫 만큼 선수에게 전달
+
+    result = player1 + '0' + player1[::-1]  #물은 무조건 양 선수의 중앙에 배치
     return result
 
 food1=[1, 3, 4, 6]
