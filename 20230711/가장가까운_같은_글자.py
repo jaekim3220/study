@@ -10,7 +10,7 @@ def solution(s):
     for i in range(len(s)): 
         # print(f"word_dict는 {word_dict}.")
         # print(f"answer은 {answer}.")
-        if s[i] not in word_dict:       # 현재 문자가 index_dict에 없는 경우
+        if s[i] not in word_dict:       # 현재 문자가 word_dict에 없는 경우
             answer.append(-1)   # 이전에 나온 동일한 문자가 없으므로 -1을 결과 리스트에 추가
         else:
             past_index = word_dict[s[i]]    # 현재 문자의 가장 최근 인덱스를 past_index에 저장
