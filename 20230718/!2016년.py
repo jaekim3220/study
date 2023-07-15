@@ -3,8 +3,8 @@
 '''
 
 def solution(a, b):
-    # 요일 표시
-    date = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT']
+    # 요일 표시 (에러 해결 - 2016년 01월 01일은 '금요일'이라고 문제에서 설명 -> FRI부터 시작해야함)
+    date = ['FRI', 'SAT', 'SUN', 'MON', 'TUE', 'WED', 'THU']
     # 각 월의 일수 표시
     month_days = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     
@@ -16,6 +16,10 @@ def solution(a, b):
     # 총 일수를 7로 나눈 나머지를 구하여 해당하는 요일을 반환
     # 인덱스는 0부터 시작하므로 
     # total_days % 7이 0일 경우에는 첫 번째 요일인 "FRI"를, 1일 경우에는 두 번째 요일인 "SAT"
-    date = date[total_days % 7]
+    answer = date[total_days % 7]
     
-    return date
+    return answer
+
+a = 5
+b = 24
+print(solution(a, b))
