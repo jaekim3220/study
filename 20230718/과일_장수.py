@@ -12,7 +12,7 @@ def solution(k, m, score):
         if len(score_list) == m:    # m개의 점수가 할당된 경우에만 계산
             # 점수 리스트에서 최솟값을 선택
             # 선택한 최솟값을 m번 곱함
-            # m개 모두 최소 값만큼 점수 부여하기 때문 때문
+            # m개 모두 최소 값만큼 점수 부여하기 때문
             answer += min(score_list) * m 
     return answer
 
