@@ -12,9 +12,10 @@ def solution(nums):
     # 이제 폰켓몬을 선택할 수 있는 종류의 수의 최댓값을 확인
     # N/2마리의 폰켓몬을 선택하여 가장 많은 종류의 폰켓몬을 선택
     # -> 선택할 수 있는 폰켓몬 `종류`의 개수를 최대로 유도
-    maxCase =  min(len(unique_nums), len(nums) // 2)
 
-    return maxCase
+    maxCase = len(unique_nums)  # 최대로 선택할 수 있는 폰켓몬 종류의 수
+    maxChoice = len(nums) // 2  # 선택해야 하는 폰켓몬의 수
+    return min(maxCase, maxChoice)
 
 nums1 = [3,1,2,3]
 print("1번 : ", solution(nums1))
