@@ -15,6 +15,14 @@ def solution(k, score):
             if min(score_list)<s: # 새 점수가 저장된 점수 최소값 보다 크다면
                 score_list.remove(min(score_list))  #저장된 최소 점수 빼기
                 score_list.append(s)    #새로운 점수 추가
-        answer.append(score_list) #min(score_list)이 아닌 (score_list)를 입력해서 에러가 발생한 거였음
-        # answer.append(min(score_list))   #명예의 전당 값에 최소 점수 입력
+        # min(score_list)이 아닌 (score_list)를 입력해서 에러가 발생한 거였음
+        answer.append(min(score_list))   #명예의 전당 값에 최소 점수 입력
     return answer
+
+k1 = 3
+score1 = [10, 100, 20, 150, 1, 100, 200]
+print("1번 : ",solution(k1, score1))
+print("-"*30)
+k2 = 4
+score2 = [0, 300, 40, 300, 20, 70, 150, 50, 500, 1000]
+print("2번 : ",solution(k2, score2))
