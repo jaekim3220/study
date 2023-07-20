@@ -14,9 +14,9 @@ def solution(answers):
     for i, a in enumerate(answers): # index 순서와 값을 할당
         if a == student1[i % len(student1)]:    #answer의 index는 학생의 답안 패턴보다 짧거나 길 수 있음
             student1_score += 1
-        if a == student2[i % len(student1)]:    #answer의 index는 학생의 답안 패턴보다 짧거나 길 수 있음
+        if a == student2[i % len(student2)]:    #answer의 index는 학생의 답안 패턴보다 짧거나 길 수 있음
             student2_score += 1
-        if a == student3[i % len(student1)]:    #answer의 index는 학생의 답안 패턴보다 짧거나 길 수 있음
+        if a == student3[i % len(student3)]:    #answer의 index는 학생의 답안 패턴보다 짧거나 길 수 있음
             student3_score += 1
     # print(student1_score, student2_score, student3_score)
 
@@ -34,5 +34,5 @@ def solution(answers):
 answers1 = [1,2,3,4,5]
 print('1번 : ', solution(answers1))
 print("-"*30)
-answers2 = [1,2,3,4,5]
+answers2 = [1,3,2,4,2]
 print('2번 : ', solution(answers2))
