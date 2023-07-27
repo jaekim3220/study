@@ -22,13 +22,13 @@
 # 도전2
 #------------------------------
 def solution(n, m, section):
-    answer = 1 # 칠하는 횟수 초기화
+    answer = 1 # 칠하는 횟수 초기화(최소 한 번은 칠한다)
     paint = section[0] # 덧칠 시작점
     # 현재 구역과 이전 구역과의 거리가 m보다 크거나 같은 경우
     for i in range(1, len(section)):
-        if section[i] - paint >= m:
+        if section[i] - paint >= m: #현재 구역의 시작점과 마지막으로 칠한 지점과의 거리 m이상이면
             answer += 1
-            paint = section[i]
+            paint = section[i]  #paint를 현재 구역의 시작점으로 업데이트
             
     return answer
 

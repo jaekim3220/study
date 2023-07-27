@@ -17,6 +17,8 @@ def solution(nums):
                 
                 # 이제 합한 숫자가 소수인지 확인
                 # 합이 소수인지 확인
+                # 어떤 숫자가 소수인지 확인하는 방법은
+                # 그 숫자의 제곱근까지만 약수를 확인
                 for a in range(2, round(numSum / 2)): 
                     if numSum % a == 0:
                 # 합이 소수가 아니면
