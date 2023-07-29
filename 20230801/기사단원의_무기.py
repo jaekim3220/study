@@ -1,23 +1,18 @@
 def solution(number, limit, power):
-    answer = 0
-    divList = []    #약수 리스트
-    for i in range(1,number+1):    #약수를 구할 숫자 확인
-        div = 0 #약수 개수 초기화
-        for j in range(1, i+1):
-            if i % j == 0:  #기사에게 할당된 숫자 i를 1~i까지 나눌 때 나머지가 0이면 약수
+    divList = []  # 약수 list
+    for i in range(1, number + 1):  # 1부터 number까지
+        div = 0
+        for j in range(1, int(i ** (1 / 2)) + 1):  # 1부터 i의 제곱근까지
+            if i % j == 0:
                 div += 1
-        if div > limit: #공격력이 limit보다 높으면
-            div = power #power로 대체
+            if div > limit:  # limit값을 초과하면 power
+                div = power
         divList.append(div)
-    answer = sum(divList)
-    return answer
+    return sum(divList)
 
-# n = 5
-# l = 3
-# p = 2
-# print(solution(n, l, p))
 
-n = 10
-l = 3
-p = 2
-print(solution(n, l, p))
+print(solution(5, 3, 2))  # 10
+print(solution(10, 3, 2)) # 21
+
+
+
