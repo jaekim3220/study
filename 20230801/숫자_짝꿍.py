@@ -14,22 +14,8 @@ def solution(X, Y):
 
     return answer
 
-X = "100"
-Y = "2345"
-print(solution(X, Y))
-
-X = "100"
-Y = "203045"
-print(solution(X, Y))
-
-X = "100"
-Y = "123450"
-print(solution(X, Y))
-
-X = "12321"
-Y = "42531"
-print(solution(X, Y))
-
-X = "5525"
-Y = "1255"
-print(solution(X, Y))
+print(solution("100", "2345"))  # -1
+print(solution("100", "203045"))    # 0
+print(solution("100", "123450"))    # 10
+print(solution("12321", "42531"))   # 321
+print(solution("5525", "1255")) # 552
