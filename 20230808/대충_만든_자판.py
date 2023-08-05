@@ -9,8 +9,11 @@ def solution(keymap, targets):
     keyDict = {}
     for key in keymap:
         for i in range(len(key)):
-            if key[i] not in keyDict:   # keymap의 key의 index 번호를 추출
+            # keymap의 key의 index 번호를 추출.
+            # 이미 딕셔너리에 있다며 문자가 처음 등장한 인덱스 삽입
+            if key[i] not in keyDict or keyDict[key[i]] > i:
                 keyDict[key[i]] = i+1   # i는 index=0부터 시작
+            # print("keyDict : ",keyDict)
 
     for target in targets:
         count = 0
